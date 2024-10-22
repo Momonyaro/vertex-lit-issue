@@ -1,0 +1,36 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="vertex-lit-issue"
+run/main_scene="res://test.tscn"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+SettingsDataManager="*res://addons/modular-settings-menu/singletons/settings_data_manager.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/resizable=false
+mouse_cursor/size/viewport_height=1080
+mouse_cursor/size/viewport_width=1920
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/modular-settings-menu/plugin.cfg")
+
+[rendering]
+
+shading/overrides/force_vertex_shading=true

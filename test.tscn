@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://0bebgxjmway6"]
+
+[ext_resource type="PackedScene" uid="uid://px6a2dg8cawb" path="res://addons/modular-settings-menu/scenes/settings.tscn" id="1_ipavo"]
+[ext_resource type="PackedScene" uid="uid://bktugkwf3w1ja" path="res://door_01.glb" id="2_3eeng"]
+[ext_resource type="Script" path="res://tests.gd" id="3_7cjrk"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.47637)
+current = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Settings" parent="CanvasLayer" node_paths=PackedStringArray("MenuPanelRef") instance=ExtResource("1_ipavo")]
+MenuPanelRef = NodePath("..")
+IGNORED_SECTIONS_ = Array[String](["Gameplay", "Controls", "Audio"])
+
+[node name="door_01" parent="." instance=ExtResource("2_3eeng")]
+transform = Transform3D(0.987967, 0.0894577, -0.126169, -0.024316, 0.89545, 0.444497, 0.152741, -0.436081, 0.886851, -0.175, -0.948, 1.517)
+script = ExtResource("3_7cjrk")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.662575, 0.353967, 1.93521)
