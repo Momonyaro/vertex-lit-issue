@@ -62,11 +62,8 @@ func fill_options_button() -> void:
 func option_selected(index: int) -> void:
 	# Check if the settings menu is open
 	print(index);
-	# Update the settings cache with the selected option
-	ParentRef.settingsCache_[IDENTIFIER] = OptionsRef.get_item_text(index)
-	# Check if the selected value is different than the saved value
-	ParentRef.settings_changed(IDENTIFIER)
 
 	# Update the element's values
 	currentValue = OptionsRef.get_item_text(index)
 	selectedIndex = index
+	_apply_settings()
