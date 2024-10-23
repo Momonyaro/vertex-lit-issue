@@ -60,9 +60,6 @@ func fill_options_button() -> void:
 
 
 func option_selected(index: int) -> void:
-	# Check if the settings menu is open
-	print(index);
-
 	# Update the element's values
 	currentValue = OptionsRef.get_item_text(index)
 	selectedIndex = index
