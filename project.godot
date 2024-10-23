@@ -21,8 +21,6 @@ SettingsDataManager="*res://addons/modular-settings-menu/singletons/settings_dat
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
 window/size/resizable=false
 mouse_cursor/size/viewport_height=1080
 mouse_cursor/size/viewport_width=1920
